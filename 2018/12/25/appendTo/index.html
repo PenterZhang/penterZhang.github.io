@@ -10,7 +10,7 @@
 		
 
 <head><meta name="generator" content="Hexo 3.8.0">
-	<title>categories</title>
+	<title>JQ appendChild与appendFirst分别应该怎么实现？</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="apple-mobile-web-app-title" content="Amaze UI">
@@ -54,8 +54,8 @@
 		
 		
 			
-			<p class="page-name">分类</p>
-		
+			<p class="page-name">当前文章&nbsp;:&nbsp;《JQ appendChild与appendFirst分别应该怎么实现？》</p>
+			
 		
 	
 	
@@ -148,33 +148,183 @@
 		<!--main-->
 		<main> 
 		<div class="page-container">
-		<!--content start-->
+		<!-- content srart -->
 <div class="am-g am-g-fixed blog-fixed blog-content">
-    <div class="am-u-md-8 am-u-sm-12">
-        <article class="am-article blog-article-p">
+	<div class="am-u-md-8 am-u-sm-12">
 
-            <div class="page-header">
-	<div class="blog-text-center">
-		
-			
-			<i class="fa fa-pencil-square-o">总计0个分类</i>
-			
-		  	 		
-	</div>    	 		
-</div>  	 		
+		<article class="am-article blog-article-p">
 
-            
+			<div class="am-article-hd">
+				
 
-                <div class="category">
-                    
-                </div>
 
-            
-        </article>
-    </div>
+				<h1 class="am-article-title blog-text-center">
+					
+					
+	
+		<a href="/2018/12/25/appendTo/" itemprop="url">		
+			JQ appendChild与appendFirst分别应该怎么实现？		
+		</a>
+	
+
+				</h1>
+
+				<p class="am-article-meta blog-text-center">
+					<span>
+						<i class="fa fa-clock-o"></i> 
+						<a href="/2018/12/25/appendTo/" itemprop="url">
+	<time datetime="2018-12-25T06:13:29.554Z" itemprop="datePublished">
+  		2018-12-25
+  </time>
+</a>    
+&nbsp;
+					</span>
+					
+					<span>						
+						
+					</span>
+				</p>
+			</div>
+
+			<div class="am-article-bd">
+				<div class="content" id="post-content">
+					
+						<h2 id="ok-话不多说，看代码吧！"><a href="#ok-话不多说，看代码吧！" class="headerlink" title="ok 话不多说，看代码吧！"></a>ok 话不多说，看代码吧！</h2><blockquote>
+<p>在开始以前，问一个问题，百叶扇效果你们会做么？</p>
+<blockquote>
+<p>首先 JQ里面的appendTo()这个函数是往选中的元素末尾添加的 </p>
+<blockquote>
+<p>比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;a&gt;</span><br><span class="line">  &lt;b class=&quot;1&quot;&gt;&lt;/b&gt;</span><br><span class="line">  &lt;b class=&quot;2&quot;&gt;&lt;/b&gt;</span><br><span class="line">  &lt;b class=&quot;3&quot;&gt;&lt;/b&gt;</span><br><span class="line">  &lt;b class=&quot;4&quot;&gt;&lt;/b&gt;</span><br><span class="line">  &lt;b class=&quot;5&quot;&gt;&lt;/b&gt;</span><br><span class="line">  &lt;b class=&quot;6&quot;&gt;&lt;/b&gt;</span><br><span class="line">&lt;/a&gt;</span><br><span class="line">  b:eq(0).appendTo(a)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>以上代码的appendTo(b)被执行的时候会把a 克隆到每一个b里面也就是会变成<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;a&gt;</span><br><span class="line">  &lt;b class=&quot;6&quot;&gt;&lt;/b&gt;</span><br><span class="line">  &lt;b class=&quot;1&quot;&gt;&lt;/b&gt;</span><br><span class="line">  &lt;b class=&quot;2&quot;&gt;&lt;/b&gt;</span><br><span class="line">  &lt;b class=&quot;3&quot;&gt;&lt;/b&gt;</span><br><span class="line">  &lt;b class=&quot;4&quot;&gt;&lt;/b&gt;</span><br><span class="line">  &lt;b class=&quot;5&quot;&gt;&lt;/b&gt;</span><br><span class="line">&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>会变成以上效果</p>
+</blockquote>
+<h2 id="so-问题来了，-怎么吧第一个添加到最后一个里面-变成"><a href="#so-问题来了，-怎么吧第一个添加到最后一个里面-变成" class="headerlink" title="so 问题来了， 怎么吧第一个添加到最后一个里面?变成"></a>so 问题来了， 怎么吧第一个添加到最后一个里面?变成</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;a&gt;</span><br><span class="line">  &lt;b class=&quot;2&quot;&gt;&lt;/b&gt;</span><br><span class="line">  &lt;b class=&quot;3&quot;&gt;&lt;/b&gt;</span><br><span class="line">  &lt;b class=&quot;4&quot;&gt;&lt;/b&gt;</span><br><span class="line">  &lt;b class=&quot;5&quot;&gt;&lt;/b&gt;</span><br><span class="line">  &lt;b class=&quot;6&quot;&gt;&lt;/b&gt;</span><br><span class="line">  &lt;b class=&quot;1&quot;&gt;&lt;/b&gt;</span><br><span class="line">&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>以上的效果呢?</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>如果你说吧 b:eq(last).appendTo(a)的话 那就大错特错了！不信你们可以试试</p>
+</blockquote>
+</blockquote>
+<h2 id="童鞋们-考虑一下-下期公布。"><a href="#童鞋们-考虑一下-下期公布。" class="headerlink" title="童鞋们 考虑一下 下期公布。"></a>童鞋们 考虑一下 下期公布。</h2>
+					
+				</div>
+			</div>
+		</article>
+
+		<ul class="am-pagination">
+    
+	
+		<li class="am-pagination-next">
+		<a class="pull-right" href="/2018/11/12/Sense-of-creation/" title="Sense of creation">
+			下一篇 &raquo;
+		</a>
+		</li>
+	 
+ </ul>
+        
+
+		<div class="theme-annie-comment-button-container">
+	<button id="annie-comment-button" class="theme-annie-comment-button" onclick="Annie_Comment()">
+		加载评论
+		<!--加载评论-->
+	</button>
 </div>
 
+<div id="annie-comment-container" class="theme-annie-comment-main-container">
 
+	
+		
+			<!-- comment valine -->
+			<!-- show valine comment -->
+<div id="valineComment" class="comment"></div>
+
+<!-- valine`s js & css -->
+<script>
+	window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')
+</script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/js/valine.min.js"></script>
+<link rel="stylesheet" href="/css/comment.css">
+
+<script>
+	var checkExistComment = setInterval(function() {
+		if( $('#valineComment').length ) {
+			new Valine({
+				// AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+				av: AV,
+				//使用id寻找div元素（使用class可能找不到）
+				el: '#valineComment',
+				emoticon_url: 'https://cloud.panjunwen.com/alu',
+				emoticon_list: ["吐.png", "期待.png", "高兴.png", "吐血倒地.png", "哭泣.png", "欢呼.png"],
+				app_id: "3333....", //获取APP ID
+				app_key: "3333......", //获取APP KEY
+				placeholder: "no any!", //评论框占位提示文字        			
+			});
+			clearInterval(checkExistComment);
+		}
+	}, 100);
+</script>
+		
+	
+
+</div>
+
+<script type="text/javascript">
+	/* Show Comment */
+	var Annie_Comment = function() {
+		function Show_Hidden(obj) {
+			obj.style.display = 'block';
+		}
+		
+		//var obutton = $('#annie-comment-button');
+		//var obutton = $('#annie-comment-container');
+		var obutton = document.getElementById("annie-comment-button" || "0");
+		var odiv = document.getElementById("annie-comment-container");
+		if( 'obutton' ) {
+			obutton.onclick = function() {
+				Show_Hidden(odiv);
+				$("#annie-comment-button").css("display", 'none');
+				return false;
+			}
+		}
+	};
+
+	(function Annie_Init() {
+		Annie_Comment();
+	})();
+</script>
+		
+		<!--
+	时间：2018-09-24
+	描述：The TOC module refers to 'https://github.com/codefine/hexo-theme-mellow', include toc.ejs、toc.js、toc.css. All rights reserved by codefine. 
+-->
+
+	
+		<aside class="post-widget">
+			<nav class="post-toc-wrap" id="post-toc">
+				
+					<strong>文章目录</strong>
+				
+				
+				<!--toc(post.content)-->
+				<ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ok-话不多说，看代码吧！"><span class="post-toc-text">ok 话不多说，看代码吧！</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#so-问题来了，-怎么吧第一个添加到最后一个里面-变成"><span class="post-toc-text">so 问题来了， 怎么吧第一个添加到最后一个里面?变成</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#童鞋们-考虑一下-下期公布。"><span class="post-toc-text">童鞋们 考虑一下 下期公布。</span></a></li></ol>
+			</nav>
+			<div class="post-toc-bar"><div>
+		</div></div></aside>
+	
+
+	</div>
+</div>
 		</div>
 		</main>
 		
@@ -246,6 +396,11 @@
 	}
 </style>
 
+
+	<script src="/js/motto.js"></script>
+	<script type="text/javascript">
+		$(".motto").html(getMingYanContent());
+	</script>	
 
 
 
@@ -587,6 +742,8 @@
 
 
 
+
+	<script type="text/javascript" src="/js/toc.js"></script>
 
 
 <script type="text/javascript" src="/js/main.js"></script>
