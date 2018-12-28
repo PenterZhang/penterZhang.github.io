@@ -10,7 +10,7 @@
 		
 
 <head><meta name="generator" content="Hexo 3.8.0">
-	<title>keyDown dom实例</title>
+	<title>JS入门</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="apple-mobile-web-app-title" content="Amaze UI">
@@ -54,14 +54,14 @@
 		
 		
 			
-			<p class="page-name">当前文章&nbsp;:&nbsp;《keyDown dom实例》</p>
+			<p class="page-name">当前文章&nbsp;:&nbsp;《JS入门》</p>
 			
 		
 	
 	
 	<!-- others: such as change-bg, time... -->
 	<p class="page-name-other">
-		12/27/2018 
+		12/28/2018 
 		<style type="text/css">
 	header:after {
 		content: '';
@@ -162,8 +162,8 @@
 					
 					
 	
-		<a href="/2018/11/12/keyDown-Dom/" itemprop="url">		
-			keyDown dom实例		
+		<a href="/2018/12/12/JS入门/" itemprop="url">		
+			JS入门		
 		</a>
 	
 
@@ -172,9 +172,9 @@
 				<p class="am-article-meta blog-text-center">
 					<span>
 						<i class="fa fa-clock-o"></i> 
-						<a href="/2018/11/12/keyDown-Dom/" itemprop="url">
-	<time datetime="2018-11-12T08:53:12.000Z" itemprop="datePublished">
-  		2018-11-12
+						<a href="/2018/12/12/JS入门/" itemprop="url">
+	<time datetime="2018-12-11T16:00:00.000Z" itemprop="datePublished">
+  		2018-12-12
   </time>
 </a>    
 &nbsp;
@@ -184,7 +184,7 @@
 						
 							<i class="fa fa-tags"></i>
 							
-								<a href="#JavaScript" title="JavaScript" rel="2">JavaScript</a>&nbsp;
+								<a href="#JavaScript" title="JavaScript" rel="4">JavaScript</a>&nbsp;
 													 											
 						
 					</span>
@@ -194,27 +194,18 @@
 			<div class="am-article-bd">
 				<div class="content" id="post-content">
 					
-						<h2 id="JQ键盘按下监听事件（1）："><a href="#JQ键盘按下监听事件（1）：" class="headerlink" title="JQ键盘按下监听事件（1）："></a>JQ键盘按下监听事件（1）：</h2><p><code>$(&#39;body&#39;).keydown(function (res){
-    console.log(res.originalEvent.key);
-  })</code></p>
-<blockquote>
-<p>以上代码效果为当键盘按键按下的时候打印出来的是按键的名字</p>
-<blockquote>
-<p>比如我在页面上按下”D”的时候 如果大写开着就是“D”，如果没开就是“d”</p>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="JQ键盘按下监听事件（2）"><a href="#JQ键盘按下监听事件（2）" class="headerlink" title="JQ键盘按下监听事件（2）"></a>JQ键盘按下监听事件（2）</h2><p><code>$(&#39;body&#39;).keydown(function (res){
-    console.log(res.keyCode);
-  })</code></p>
-<blockquote>
-<p>以上代码效果为打印键盘按键的值;</p>
-<blockquote>
-<p>比如键盘的上下左右键，分别为 37、38、39、40</p>
-</blockquote>
-</blockquote>
-
+						<h3 id="JS与DOM的关系"><a href="#JS与DOM的关系" class="headerlink" title="JS与DOM的关系"></a>JS与DOM的关系</h3><h3 id="浏览器有渲染html代码的功能，把html源码（如div-p标签等）在内存里形成一个DOM对象"><a href="#浏览器有渲染html代码的功能，把html源码（如div-p标签等）在内存里形成一个DOM对象" class="headerlink" title="浏览器有渲染html代码的功能，把html源码（如div,p标签等）在内存里形成一个DOM对象"></a>浏览器有渲染html代码的功能，把html源码（如div,p标签等）在内存里形成一个DOM对象</h3><h3 id="文档对象模型DOM（Document-Object-Model）定义访问和处理HTML文档的标准方法。DOM-将HTML文档呈现为带有元素、属性和文本的树结构（节点树）。"><a href="#文档对象模型DOM（Document-Object-Model）定义访问和处理HTML文档的标准方法。DOM-将HTML文档呈现为带有元素、属性和文本的树结构（节点树）。" class="headerlink" title="文档对象模型DOM（Document Object Model）定义访问和处理HTML文档的标准方法。DOM 将HTML文档呈现为带有元素、属性和文本的树结构（节点树）。"></a>文档对象模型DOM（Document Object Model）定义访问和处理HTML文档的标准方法。DOM 将HTML文档呈现为带有元素、属性和文本的树结构（节点树）。</h3><p><img src="https://images2015.cnblogs.com/blog/1011409/201608/1011409-20160825145433866-1839116942.png" alt="示例图" title="示例图"></p>
+<p><img src="https://images2015.cnblogs.com/blog/1011409/201608/1011409-20160825145442022-578930892.png" alt="示例图" title="示例图"></p>
+<h3 id="HTML文档可以说由节点构成的集合，三种常见的DOM节点"><a href="#HTML文档可以说由节点构成的集合，三种常见的DOM节点" class="headerlink" title="HTML文档可以说由节点构成的集合，三种常见的DOM节点:"></a>HTML文档可以说由节点构成的集合，三种常见的DOM节点:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 元素节点：上图中&lt;html&gt;、&lt;body&gt;、&lt;p&gt;等都是元素节点，即标签。</span><br><span class="line"></span><br><span class="line">2. 文本节点:向用户展示的内容，如&lt;li&gt;里的内容JavaScript、DOM、CSS等文本。</span><br><span class="line"></span><br><span class="line">3. 属性节点:元素属性，如&lt;a&gt;标签的链接属性href=&quot;http://www.imooc.com&quot;。</span><br></pre></td></tr></table></figure>
+<h3 id="BOM对象（把浏览器的地址栏，历史记录，DOM等装在一个对象）"><a href="#BOM对象（把浏览器的地址栏，历史记录，DOM等装在一个对象）" class="headerlink" title="BOM对象（把浏览器的地址栏，历史记录，DOM等装在一个对象）"></a>BOM对象（把浏览器的地址栏，历史记录，DOM等装在一个对象）</h3><p>浏览器内部有JS解释器/引擎；在html里的JS代码会被引擎所执行，执行的结果是对DOM对象的操作（即是对节点树内的标签进行操作）</p>
+<p>JS添加特效 ： 无非就是用JS操作DOM对象而已</p>
+<h3 id="JS的引入方式"><a href="#JS的引入方式" class="headerlink" title="JS的引入方式"></a>JS的引入方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">JS代码可在html中任意位置编写，但浏览器解析代码是从上到下的，需注意此时html是否已经解析该标签，能让JS能否获取该DOM对象，所以有时会把代码放到html的结束前，即是&lt;/html&gt;前</span><br><span class="line"></span><br><span class="line">直接在html中编写 ：&lt;script type=&quot;text/javascript&quot;&gt;代码&lt;/script&gt; </span><br><span class="line"></span><br><span class="line">通过外部引用进来 ： &lt;script type=text/javascript src=””&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">为防止网页加载缓慢，也可以把非关键的JavaScript放到网页底部</span><br></pre></td></tr></table></figure>
+<h3 id="变量的声明"><a href="#变量的声明" class="headerlink" title="变量的声明"></a>变量的声明</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var 变量名；变量名区分大小写；不用var声明会污染全局变量；变量名以字母、下划线、美元符号开头，后面部分可数字</span><br><span class="line"></span><br><span class="line">函数 即 完成特定功能的代码段；</span><br><span class="line"></span><br><span class="line">常用方法</span><br><span class="line">输出语句到html中，使用document.write(“”)</span><br><span class="line"></span><br><span class="line">Confire() ：消息确认对话框；点击确认返回true</span><br></pre></td></tr></table></figure>
+<h3 id="运算符问题"><a href="#运算符问题" class="headerlink" title="运算符问题"></a>运算符问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">拼接运算符：+ ， 如果是数字则相加，是字符则连接 ； 如2+3+‘love’+4+5 //输出5love45</span><br><span class="line"></span><br><span class="line">和PHP不同，一般用.</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">逻辑运算符或 ：返回为true的值 ； 如 ： </span><br><span class="line"></span><br><span class="line">var a = 1;</span><br><span class="line"></span><br><span class="line">var b = false;</span><br><span class="line"></span><br><span class="line">var d = (a || b);  //d为1</span><br></pre></td></tr></table></figure>
+<h3 id="逻辑运算符与-：-返回最后面的变量值"><a href="#逻辑运算符与-：-返回最后面的变量值" class="headerlink" title="逻辑运算符与 ： 返回最后面的变量值"></a>逻辑运算符与 ： 返回最后面的变量值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = 22;</span><br><span class="line"></span><br><span class="line">var b=33;</span><br><span class="line"></span><br><span class="line">alert(a &amp;&amp; b); //输出33</span><br></pre></td></tr></table></figure>
+<h3 id="数组与对象的操作"><a href="#数组与对象的操作" class="headerlink" title="数组与对象的操作"></a>数组与对象的操作</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">JS中数组的数字键值只能从0开始递增</span><br><span class="line"></span><br><span class="line">注意  ： 数组中括号，JS中length ； 对象用大括号</span><br></pre></td></tr></table></figure>
+<p><img src="https://images2015.cnblogs.com/blog/1011409/201608/1011409-20160825145628866-442077365.png" alt="示例图" title="示例图"></p>
+<h1 id="以上就是JS入门第一章第一节"><a href="#以上就是JS入门第一章第一节" class="headerlink" title="以上就是JS入门第一章第一节"></a>以上就是JS入门第一章第一节</h1>
 					
 				</div>
 			</div>
@@ -223,14 +214,14 @@
 		<ul class="am-pagination">
     
     	<li class="am-pagination-prev">
-   		<a class="pull-left" href="/2018/11/12/Sense-of-creation/" title="Sense of creation">
+   		<a class="pull-left" href="/2018/12/21/keyDown-Dom/" title="keyDown dom实例">
       		&laquo; 上一篇
 		</a>
 		</li>
 	
 	
 		<li class="am-pagination-next">
-		<a class="pull-right" href="/2018/11/12/hello-world/" title="Hello World">
+		<a class="pull-right" href="/2018/11/12/Sense-of-creation/" title="Sense of creation">
 			下一篇 &raquo;
 		</a>
 		</li>
@@ -322,8 +313,8 @@
 				
 				
 				<!--toc(post.content)-->
-				<ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JQ键盘按下监听事件（1）："><span class="post-toc-text">JQ键盘按下监听事件（1）：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JQ键盘按下监听事件（2）"><span class="post-toc-text">JQ键盘按下监听事件（2）</span></a></li></ol>
-			</nav>
+				<ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JS与DOM的关系"><span class="post-toc-text">JS与DOM的关系</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#浏览器有渲染html代码的功能，把html源码（如div-p标签等）在内存里形成一个DOM对象"><span class="post-toc-text">浏览器有渲染html代码的功能，把html源码（如div,p标签等）在内存里形成一个DOM对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文档对象模型DOM（Document-Object-Model）定义访问和处理HTML文档的标准方法。DOM-将HTML文档呈现为带有元素、属性和文本的树结构（节点树）。"><span class="post-toc-text">文档对象模型DOM（Document Object Model）定义访问和处理HTML文档的标准方法。DOM 将HTML文档呈现为带有元素、属性和文本的树结构（节点树）。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTML文档可以说由节点构成的集合，三种常见的DOM节点"><span class="post-toc-text">HTML文档可以说由节点构成的集合，三种常见的DOM节点:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#BOM对象（把浏览器的地址栏，历史记录，DOM等装在一个对象）"><span class="post-toc-text">BOM对象（把浏览器的地址栏，历史记录，DOM等装在一个对象）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JS的引入方式"><span class="post-toc-text">JS的引入方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#变量的声明"><span class="post-toc-text">变量的声明</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#运算符问题"><span class="post-toc-text">运算符问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#逻辑运算符与-：-返回最后面的变量值"><span class="post-toc-text">逻辑运算符与 ： 返回最后面的变量值</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数组与对象的操作"><span class="post-toc-text">数组与对象的操作</span></a></li></ol><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#以上就是JS入门第一章第一节"><span class="post-toc-text">以上就是JS入门第一章第一节</span></a>
+			</li></nav>
 			<div class="post-toc-bar"><div>
 		</div></div></aside>
 	
