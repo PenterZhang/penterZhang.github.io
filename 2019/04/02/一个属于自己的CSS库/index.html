@@ -1,0 +1,747 @@
+<!--
+	作者：Sariay
+	时间：2018-09-25
+	描述：There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!
+-->
+
+	<!DOCTYPE html>
+	<html class="scrollbar">
+		
+
+<head><meta name="generator" content="Hexo 3.8.0">
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+       | peter
+    
+  </title>
+  <meta name="author" content="peterZhang">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+    <!-- jquery -->
+	<script src="/js/jquery-2.1.1.min.js"></script>
+
+  <!-- leancloud -->
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script src="/js/leancloud.js"></script>
+</head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="transition">
+					<div class="three-bounce1"></div>
+					<div class="three-bounce2"></div>
+					<div class="three-bounce3"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground" data-img-mode="normal" data-normal-src="/img/background.jpg" data-random-max="110" data-random-src="https://sariay.github.io/Random-img/">
+	<div class="mask">
+		<div class="h-header">
+			<div id="logo-S">
+				
+					<a href="/">
+						<img src="/img/logo.png" alt="Logo">
+					</a>
+				
+			</div>
+			<!-- Navigation in header(id="navigation-S") -->
+			<div id="navigation-S">
+				<ul>
+					
+						<li class="menu-home">
+							<a href="/" class="menu-item-home">主页</a>
+						</li>
+					
+						<li class="menu-archive">
+							<a href="/archives" class="menu-item-archive">归档</a>
+						</li>
+					
+						<li class="menu-categories">
+							<a href="/categories" class="menu-item-categories">分类</a>
+						</li>
+					
+						<li class="menu-tags">
+							<a href="/tags" class="menu-item-tags">标签</a>
+						</li>
+					
+						<li class="menu-about">
+							<a href="/about" class="menu-item-about">关于</a>
+						</li>
+					
+						<li class="menu-gallery">
+							<a href="/gallery" class="menu-item-gallery">相册</a>
+						</li>
+					
+
+					
+				</ul>			
+			</div>				
+		</div>
+
+		<div class="h-body">	
+			<!-- motto -->
+			
+				<div id="page-motto">
+					<p class="motto">
+						
+					</p>
+				</div>
+			
+
+			<div id="navigation-H">
+				<!-- Page title -->
+				<p>
+					
+						当前文章&nbsp;:&nbsp;《》
+					
+				</p>
+				<!-- Progress bar -->
+				<div id="progress-bar"></div>
+
+				<!-- Progress percent -->
+				<div id="progress-percentage">
+					<h1>0.0%</h1>
+				</div>
+			</div>
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<ul>
+				<li>
+					<a><i class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>切换背景</a>
+				</li>
+				<li>
+					<a href="javascript:;" id="read-more"><i class="fa fa-angle-double-down"></i>继续阅读</a>
+				</li>
+				<li>
+					<a href="https://github.com/Sariay/hexo-theme-Annie" target="_blank"><i class="fa fa-download"></i>克隆主题</a>
+				</li>
+			</ul>
+		</div>
+		
+		<!-- This is only a demo, please go to "https://time.is" to set your city time! -->
+<style type="text/css">
+	.header-date {
+		position: absolute;
+		left: 40px;
+		bottom: 30px;
+		writing-mode: tb-rl;
+		font-size: 36px;
+	}	
+	.header-date a {
+		border-bottom: none;
+	}
+	@media only screen and (max-width: 768 ) {
+		.header-date {
+			position: absolute;
+			left: 40px;
+			bottom: 30px;
+			writing-mode: tb-rl;
+			font-size: 20px;
+		}			
+	}
+</style>
+<div class="header-date">
+	<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow"></a>
+	<span id="Beijing_z43d"></span>
+</div>
+<script src="//widget.time.is/zh.js"></script>
+<script>
+	time_is_widget.init({
+		Beijing_z43d:{
+			template:"DATE", 
+			date_format:"year年 monthname dnum日"
+		}
+	});
+</script>
+</div></header>
+
+<!-- Navigation in div(id="navigation-H") -->
+<a class="nav-trigger">
+	<span></span>
+</a>
+
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<h3>Navigation</h3>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	<div class="nav-body">
+		<ul>
+			
+				<li class="menu-home">
+					<a href="/" class="menu-item-home">主页</a>
+				</li>
+			
+				<li class="menu-archive">
+					<a href="/archives" class="menu-item-archive">归档</a>
+				</li>
+			
+				<li class="menu-categories">
+					<a href="/categories" class="menu-item-categories">分类</a>
+				</li>
+			
+				<li class="menu-tags">
+					<a href="/tags" class="menu-item-tags">标签</a>
+				</li>
+			
+				<li class="menu-about">
+					<a href="/about" class="menu-item-about">关于</a>
+				</li>
+			
+				<li class="menu-gallery">
+					<a href="/gallery" class="menu-item-gallery">相册</a>
+				</li>
+			
+
+			
+		</ul>
+	</div>
+
+	<div class="nav-footer">
+		<ul>
+	
+		
+			<li>
+				<a href="http://github.com/" title="Github" target="_blank">
+					<i class="fa fa-github"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="http://github.com/" title="Weibo" target="_blank">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="mailto:http://github.com/" title="Email" target="_blank">
+					<i class="fa fa-envelope-o"></i>
+				</a>
+			</li>
+		
+
+		
+			<li>
+				<a href="http://github.com/" title="QQ" target="_blank">
+					<i class="fa fa-qq"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="http://github.com/" title="Twitter" target="_blank">
+					<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+		
+	 
+</ul>
+	</div>
+</nav>
+
+		
+		<!--main-->
+		<main>
+			<div class="layout-post">
+	
+	
+	<div class="article-title">
+		
+	</div>
+
+	<div class="article-meta">
+		<span>
+			
+	发布于
+	<a href="/2019/04/02/一个属于自己的CSS库/" itemprop="url">
+		<time datetime="2019-04-02T01:40:08.434Z" itemprop="datePublished">
+	  		2019-04-02
+	  </time>
+	</a> 
+
+	/
+	更新于
+	<a href="/2019/04/02/一个属于自己的CSS库/" itemprop="url">
+		<time datetime="2019-04-02T01:40:08.434Z" itemprop="dateUpdated">
+	  		2019-04-02
+	  </time>
+	</a> 	
+
+		</span>
+		/
+		<span>
+			<i class="fa fa-tags"></i>
+					
+		</span>
+		/
+		
+
+    <span class="leancloud_visitors" id="/2019/04/02/一个属于自己的CSS库/_visitors" data-url="/2019/04/02/一个属于自己的CSS库/" data-title="">
+        热度
+        <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
+    </span>
+    
+    /
+
+
+
+    <span class="leancloud_likes" id="/2019/04/02/一个属于自己的CSS库/_likes" data-url="/2019/04/02/一个属于自己的CSS库/" data-title="" rel="unlike">
+        喜欢
+        <i class="fa fa-heart"></i>
+        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
+    </span>
+
+	</div>
+
+	<div class="article-content" id="article-content">
+		<h3 id="好久没更新了呢-送上一个大礼包！"><a href="#好久没更新了呢-送上一个大礼包！" class="headerlink" title="好久没更新了呢~ 送上一个大礼包！"></a>好久没更新了呢~ 送上一个大礼包！</h3><blockquote>
+<p>一个自己写的CSS库，如有发现不完整的可以联系我进行补充；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br><span class="line">429</span><br><span class="line">430</span><br><span class="line">431</span><br><span class="line">432</span><br><span class="line">433</span><br><span class="line">434</span><br><span class="line">435</span><br><span class="line">436</span><br><span class="line">437</span><br><span class="line">438</span><br><span class="line">439</span><br><span class="line">440</span><br><span class="line">441</span><br><span class="line">442</span><br><span class="line">443</span><br><span class="line">444</span><br><span class="line">445</span><br><span class="line">446</span><br><span class="line">447</span><br><span class="line">448</span><br><span class="line">449</span><br><span class="line">450</span><br><span class="line">451</span><br><span class="line">452</span><br><span class="line">453</span><br><span class="line">454</span><br><span class="line">455</span><br><span class="line">456</span><br><span class="line">457</span><br><span class="line">458</span><br><span class="line">459</span><br><span class="line">460</span><br><span class="line">461</span><br><span class="line">462</span><br><span class="line">463</span><br><span class="line">464</span><br><span class="line">465</span><br><span class="line">466</span><br><span class="line">467</span><br><span class="line">468</span><br><span class="line">469</span><br><span class="line">470</span><br><span class="line">471</span><br><span class="line">472</span><br><span class="line">473</span><br><span class="line">474</span><br><span class="line">475</span><br><span class="line">476</span><br><span class="line">477</span><br><span class="line">478</span><br><span class="line">479</span><br><span class="line">480</span><br><span class="line">481</span><br><span class="line">482</span><br><span class="line">483</span><br><span class="line">484</span><br><span class="line">485</span><br><span class="line">486</span><br><span class="line">487</span><br><span class="line">488</span><br><span class="line">489</span><br><span class="line">490</span><br><span class="line">491</span><br><span class="line">492</span><br><span class="line">493</span><br><span class="line">494</span><br><span class="line">495</span><br><span class="line">496</span><br><span class="line">497</span><br><span class="line">498</span><br><span class="line">499</span><br><span class="line">500</span><br><span class="line">501</span><br><span class="line">502</span><br><span class="line">503</span><br><span class="line">504</span><br><span class="line">505</span><br><span class="line">506</span><br><span class="line">507</span><br><span class="line">508</span><br><span class="line">509</span><br><span class="line">510</span><br><span class="line">511</span><br><span class="line">512</span><br><span class="line">513</span><br><span class="line">514</span><br><span class="line">515</span><br><span class="line">516</span><br><span class="line">517</span><br><span class="line">518</span><br><span class="line">519</span><br><span class="line">520</span><br><span class="line">521</span><br><span class="line">522</span><br><span class="line">523</span><br><span class="line">524</span><br><span class="line">525</span><br><span class="line">526</span><br><span class="line">527</span><br><span class="line">528</span><br><span class="line">529</span><br><span class="line">530</span><br><span class="line">531</span><br><span class="line">532</span><br><span class="line">533</span><br><span class="line">534</span><br><span class="line">535</span><br><span class="line">536</span><br><span class="line">537</span><br><span class="line">538</span><br><span class="line">539</span><br><span class="line">540</span><br><span class="line">541</span><br><span class="line">542</span><br><span class="line">543</span><br><span class="line">544</span><br><span class="line">545</span><br><span class="line">546</span><br><span class="line">547</span><br><span class="line">548</span><br><span class="line">549</span><br><span class="line">550</span><br><span class="line">551</span><br><span class="line">552</span><br><span class="line">553</span><br><span class="line">554</span><br><span class="line">555</span><br><span class="line">556</span><br><span class="line">557</span><br><span class="line">558</span><br><span class="line">559</span><br><span class="line">560</span><br><span class="line">561</span><br><span class="line">562</span><br><span class="line">563</span><br><span class="line">564</span><br><span class="line">565</span><br><span class="line">566</span><br><span class="line">567</span><br><span class="line">568</span><br><span class="line">569</span><br><span class="line">570</span><br><span class="line">571</span><br><span class="line">572</span><br><span class="line">573</span><br><span class="line">574</span><br><span class="line">575</span><br><span class="line">576</span><br><span class="line">577</span><br><span class="line">578</span><br><span class="line">579</span><br><span class="line">580</span><br><span class="line">581</span><br><span class="line">582</span><br><span class="line">583</span><br><span class="line">584</span><br><span class="line">585</span><br><span class="line">586</span><br><span class="line">587</span><br><span class="line">588</span><br><span class="line">589</span><br><span class="line">590</span><br><span class="line">591</span><br><span class="line">592</span><br><span class="line">593</span><br><span class="line">594</span><br><span class="line">595</span><br><span class="line">596</span><br><span class="line">597</span><br><span class="line">598</span><br><span class="line">599</span><br><span class="line">600</span><br><span class="line">601</span><br><span class="line">602</span><br><span class="line">603</span><br><span class="line">604</span><br><span class="line">605</span><br><span class="line">606</span><br><span class="line">607</span><br><span class="line">608</span><br><span class="line">609</span><br><span class="line">610</span><br><span class="line">611</span><br><span class="line">612</span><br><span class="line">613</span><br><span class="line">614</span><br><span class="line">615</span><br><span class="line">616</span><br><span class="line">617</span><br><span class="line">618</span><br><span class="line">619</span><br><span class="line">620</span><br><span class="line">621</span><br><span class="line">622</span><br><span class="line">623</span><br><span class="line">624</span><br><span class="line">625</span><br><span class="line">626</span><br><span class="line">627</span><br><span class="line">628</span><br><span class="line">629</span><br><span class="line">630</span><br><span class="line">631</span><br><span class="line">632</span><br><span class="line">633</span><br><span class="line">634</span><br><span class="line">635</span><br><span class="line">636</span><br><span class="line">637</span><br><span class="line">638</span><br><span class="line">639</span><br><span class="line">640</span><br><span class="line">641</span><br><span class="line">642</span><br><span class="line">643</span><br><span class="line">644</span><br><span class="line">645</span><br><span class="line">646</span><br><span class="line">647</span><br><span class="line">648</span><br><span class="line">649</span><br><span class="line">650</span><br><span class="line">651</span><br><span class="line">652</span><br><span class="line">653</span><br><span class="line">654</span><br><span class="line">655</span><br><span class="line">656</span><br><span class="line">657</span><br><span class="line">658</span><br><span class="line">659</span><br><span class="line">660</span><br><span class="line">661</span><br><span class="line">662</span><br><span class="line">663</span><br><span class="line">664</span><br><span class="line">665</span><br><span class="line">666</span><br><span class="line">667</span><br><span class="line">668</span><br><span class="line">669</span><br><span class="line">670</span><br><span class="line">671</span><br><span class="line">672</span><br><span class="line">673</span><br><span class="line">674</span><br><span class="line">675</span><br><span class="line">676</span><br><span class="line">677</span><br><span class="line">678</span><br><span class="line">679</span><br><span class="line">680</span><br><span class="line">681</span><br><span class="line">682</span><br><span class="line">683</span><br><span class="line">684</span><br><span class="line">685</span><br><span class="line">686</span><br><span class="line">687</span><br><span class="line">688</span><br><span class="line">689</span><br><span class="line">690</span><br><span class="line">691</span><br><span class="line">692</span><br><span class="line">693</span><br><span class="line">694</span><br><span class="line">695</span><br><span class="line">696</span><br><span class="line">697</span><br><span class="line">698</span><br><span class="line">699</span><br><span class="line">700</span><br><span class="line">701</span><br><span class="line">702</span><br><span class="line">703</span><br><span class="line">704</span><br><span class="line">705</span><br><span class="line">706</span><br><span class="line">707</span><br><span class="line">708</span><br><span class="line">709</span><br><span class="line">710</span><br><span class="line">711</span><br><span class="line">712</span><br><span class="line">713</span><br><span class="line">714</span><br><span class="line">715</span><br><span class="line">716</span><br><span class="line">717</span><br><span class="line">718</span><br><span class="line">719</span><br><span class="line">720</span><br><span class="line">721</span><br><span class="line">722</span><br><span class="line">723</span><br><span class="line">724</span><br><span class="line">725</span><br><span class="line">726</span><br><span class="line">727</span><br><span class="line">728</span><br><span class="line">729</span><br><span class="line">730</span><br><span class="line">731</span><br><span class="line">732</span><br><span class="line">733</span><br><span class="line">734</span><br><span class="line">735</span><br><span class="line">736</span><br><span class="line">737</span><br><span class="line">738</span><br><span class="line">739</span><br><span class="line">740</span><br><span class="line">741</span><br><span class="line">742</span><br><span class="line">743</span><br><span class="line">744</span><br><span class="line">745</span><br><span class="line">746</span><br><span class="line">747</span><br><span class="line">748</span><br><span class="line">749</span><br><span class="line">750</span><br><span class="line">751</span><br><span class="line">752</span><br><span class="line">753</span><br><span class="line">754</span><br><span class="line">755</span><br><span class="line">756</span><br><span class="line">757</span><br><span class="line">758</span><br><span class="line">759</span><br><span class="line">760</span><br><span class="line">761</span><br><span class="line">762</span><br><span class="line">763</span><br><span class="line">764</span><br><span class="line">765</span><br><span class="line">766</span><br><span class="line">767</span><br><span class="line">768</span><br><span class="line">769</span><br><span class="line">770</span><br><span class="line">771</span><br><span class="line">772</span><br><span class="line">773</span><br><span class="line">774</span><br><span class="line">775</span><br><span class="line">776</span><br><span class="line">777</span><br><span class="line">778</span><br><span class="line">779</span><br><span class="line">780</span><br><span class="line">781</span><br><span class="line">782</span><br><span class="line">783</span><br><span class="line">784</span><br><span class="line">785</span><br><span class="line">786</span><br><span class="line">787</span><br><span class="line">788</span><br><span class="line">789</span><br><span class="line">790</span><br><span class="line">791</span><br><span class="line">792</span><br><span class="line">793</span><br><span class="line">794</span><br><span class="line">795</span><br><span class="line">796</span><br><span class="line">797</span><br><span class="line">798</span><br><span class="line">799</span><br><span class="line">800</span><br><span class="line">801</span><br><span class="line">802</span><br><span class="line">803</span><br><span class="line">804</span><br><span class="line">805</span><br><span class="line">806</span><br><span class="line">807</span><br><span class="line">808</span><br><span class="line">809</span><br><span class="line">810</span><br><span class="line">811</span><br><span class="line">812</span><br><span class="line">813</span><br><span class="line">814</span><br><span class="line">815</span><br><span class="line">816</span><br><span class="line">817</span><br><span class="line">818</span><br><span class="line">819</span><br><span class="line">820</span><br><span class="line">821</span><br><span class="line">822</span><br><span class="line">823</span><br><span class="line">824</span><br><span class="line">825</span><br><span class="line">826</span><br><span class="line">827</span><br><span class="line">828</span><br><span class="line">829</span><br><span class="line">830</span><br><span class="line">831</span><br><span class="line">832</span><br><span class="line">833</span><br><span class="line">834</span><br><span class="line">835</span><br><span class="line">836</span><br><span class="line">837</span><br><span class="line">838</span><br><span class="line">839</span><br><span class="line">840</span><br><span class="line">841</span><br><span class="line">842</span><br><span class="line">843</span><br><span class="line">844</span><br><span class="line">845</span><br><span class="line">846</span><br><span class="line">847</span><br><span class="line">848</span><br><span class="line">849</span><br><span class="line">850</span><br><span class="line">851</span><br><span class="line">852</span><br><span class="line">853</span><br><span class="line">854</span><br><span class="line">855</span><br><span class="line">856</span><br><span class="line">857</span><br><span class="line">858</span><br><span class="line">859</span><br><span class="line">860</span><br><span class="line">861</span><br><span class="line">862</span><br><span class="line">863</span><br><span class="line">864</span><br><span class="line">865</span><br><span class="line">866</span><br><span class="line">867</span><br><span class="line">868</span><br><span class="line">869</span><br><span class="line">870</span><br><span class="line">871</span><br><span class="line">872</span><br><span class="line">873</span><br><span class="line">874</span><br><span class="line">875</span><br><span class="line">876</span><br><span class="line">877</span><br><span class="line">878</span><br><span class="line">879</span><br><span class="line">880</span><br><span class="line">881</span><br><span class="line">882</span><br><span class="line">883</span><br><span class="line">884</span><br><span class="line">885</span><br><span class="line">886</span><br><span class="line">887</span><br><span class="line">888</span><br><span class="line">889</span><br><span class="line">890</span><br><span class="line">891</span><br><span class="line">892</span><br><span class="line">893</span><br><span class="line">894</span><br><span class="line">895</span><br><span class="line">896</span><br><span class="line">897</span><br><span class="line">898</span><br><span class="line">899</span><br><span class="line">900</span><br><span class="line">901</span><br><span class="line">902</span><br><span class="line">903</span><br><span class="line">904</span><br><span class="line">905</span><br><span class="line">906</span><br><span class="line">907</span><br><span class="line">908</span><br><span class="line">909</span><br><span class="line">910</span><br><span class="line">911</span><br><span class="line">912</span><br><span class="line">913</span><br><span class="line">914</span><br><span class="line">915</span><br><span class="line">916</span><br><span class="line">917</span><br><span class="line">918</span><br><span class="line">919</span><br><span class="line">920</span><br><span class="line">921</span><br><span class="line">922</span><br><span class="line">923</span><br><span class="line">924</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">  * A self-developed css script library,</span><br><span class="line">  * peter copyright!</span><br><span class="line">  * March 25, 2019</span><br><span class="line">  * First edition</span><br><span class="line">  * V1.0.0</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">body &#123;</span><br><span class="line">    color: #333;</span><br><span class="line">    background: white;</span><br><span class="line">    font-size: 14px;</span><br><span class="line">    margin: 0 auto;</span><br><span class="line">    font-family: &quot;Microsoft YaHei&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">* &#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">    padding: 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">li &#123;</span><br><span class="line">    list-style: none;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a &#123;</span><br><span class="line">    text-decoration: none;</span><br><span class="line">    color: black;</span><br><span class="line">    transition: .3s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a:focus &#123;</span><br><span class="line">    transition: .3s;</span><br><span class="line">    text-decoration: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a:hover &#123;</span><br><span class="line">    text-decoration: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">button,</span><br><span class="line">input &#123;</span><br><span class="line">    outline: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">p &#123;</span><br><span class="line">    padding: 0px;</span><br><span class="line">    margin: 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h1,</span><br><span class="line">h2,</span><br><span class="line">h3,</span><br><span class="line">h4,</span><br><span class="line">h5,</span><br><span class="line">h6&#123;</span><br><span class="line">    margin: 0px;</span><br><span class="line">    padding: 0px;</span><br><span class="line">    font-weight: 500;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">p,</span><br><span class="line">span&#123;</span><br><span class="line">    font-size: 13px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ul,</span><br><span class="line">ol &#123;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">table,</span><br><span class="line">tbody,</span><br><span class="line">tr,</span><br><span class="line">td &#123;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    display: block;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">img&#123;</span><br><span class="line">    display: block;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-cont &#123;</span><br><span class="line">    max-width: 80%;</span><br><span class="line">    margin: 0 auto;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-clear&#123;</span><br><span class="line">    clear: both;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-block&#123;</span><br><span class="line">    display: block;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-line-block&#123;</span><br><span class="line">    display: inline-block;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-inline&#123;</span><br><span class="line">    display: inline;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-float-left&#123;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-float-right&#123;</span><br><span class="line">    float: right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-font-12 &#123;</span><br><span class="line">    font-size: 12px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-font-13 &#123;</span><br><span class="line">    font-size: 13px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-font-14 &#123;</span><br><span class="line">    font-size: 14px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-font-15 &#123;</span><br><span class="line">    font-size: 15px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-font-16 &#123;</span><br><span class="line">    font-size: 16px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-font-17 &#123;</span><br><span class="line">    font-size: 17px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-font-18 &#123;</span><br><span class="line">    font-size: 18px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-font-19 &#123;</span><br><span class="line">    font-size: 19px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-font-20 &#123;</span><br><span class="line">    font-size: 20px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-font-21 &#123;</span><br><span class="line">    font-size: 21px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-font-22 &#123;</span><br><span class="line">    font-size: 22px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-font-23 &#123;</span><br><span class="line">    font-size: 23px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-font-24 &#123;</span><br><span class="line">    font-size: 24px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-font-25 &#123;</span><br><span class="line">    font-size: 25px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-vertical-mar-5 &#123;</span><br><span class="line">    margin: 5px 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-vertical-mar-10 &#123;</span><br><span class="line">    margin: 10px 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-vertical-mar-12 &#123;</span><br><span class="line">    margin: 12px 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-vertical-mar-15 &#123;</span><br><span class="line">    margin: 15px 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-vertical-mar-17 &#123;</span><br><span class="line">    margin: 17px 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-vertical-mar-20 &#123;</span><br><span class="line">    margin: 20px 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-vertical-mar-22 &#123;</span><br><span class="line">    margin: 22px 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-vertical-mar-25 &#123;</span><br><span class="line">    margin: 25px 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-vertical-mar-27 &#123;</span><br><span class="line">    margin: 27px 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-vertical-mar-30 &#123;</span><br><span class="line">    margin: 30px 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-both-mar-5 &#123;</span><br><span class="line">    margin: 0px 5px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-both-mar-10 &#123;</span><br><span class="line">    margin: 0px 10px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-both-mar-12 &#123;</span><br><span class="line">    margin: 0px 12px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-both-mar-15 &#123;</span><br><span class="line">    margin: 0px 15px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-both-mar-17 &#123;</span><br><span class="line">    margin: 0px 17px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-both-mar-20 &#123;</span><br><span class="line">    margin: 0px 20px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-both-mar-22 &#123;</span><br><span class="line">    margin: 0px 22px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-both-mar-25 &#123;</span><br><span class="line">    margin: 0px 25px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-both-mar-30 &#123;</span><br><span class="line">    margin: 0px 30px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mt-5 &#123;</span><br><span class="line">    margin-top: 5px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mt-7 &#123;</span><br><span class="line">    margin-top: 7px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mt-10 &#123;</span><br><span class="line">    margin-top: 10px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mt-12 &#123;</span><br><span class="line">    margin-top: 12px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mt-15 &#123;</span><br><span class="line">    margin-top: 15px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mt-17 &#123;</span><br><span class="line">    margin-top: 17px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mt-18 &#123;</span><br><span class="line">    margin-top: 18px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mt-19 &#123;</span><br><span class="line">    margin-top: 19px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mt-20 &#123;</span><br><span class="line">    margin-top: 20px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mr-5 &#123;</span><br><span class="line">    margin-right: 5px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mr-7 &#123;</span><br><span class="line">    margin-right: 7px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mr-8 &#123;</span><br><span class="line">    margin-right: 8px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mr-10 &#123;</span><br><span class="line">    margin-right: 10px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mr-12 &#123;</span><br><span class="line">    margin-right: 12px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mr-15 &#123;</span><br><span class="line">    margin-right: 15px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mr-17 &#123;</span><br><span class="line">    margin-right: 17px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mr-18 &#123;</span><br><span class="line">    margin-right: 18px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mr-19 &#123;</span><br><span class="line">    margin-right: 19px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mr-20 &#123;</span><br><span class="line">    margin-right: 20px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mb-5 &#123;</span><br><span class="line">    margin-bottom: 5px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mb-6 &#123;</span><br><span class="line">    margin-bottom: 6px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mb-7 &#123;</span><br><span class="line">    margin-bottom: 7px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mb-8 &#123;</span><br><span class="line">    margin-bottom: 8px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mb-9 &#123;</span><br><span class="line">    margin-bottom: 9px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mb-10 &#123;</span><br><span class="line">    margin-bottom: 10px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mb-11 &#123;</span><br><span class="line">    margin-bottom: 11px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mb-12 &#123;</span><br><span class="line">    margin-bottom: 12px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mb-13 &#123;</span><br><span class="line">    margin-bottom: 13px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mb-14 &#123;</span><br><span class="line">    margin-bottom: 14px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mb-15 &#123;</span><br><span class="line">    margin-bottom: 15px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mb-17 &#123;</span><br><span class="line">    margin-bottom: 17px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mb-18 &#123;</span><br><span class="line">    margin-bottom: 18px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mb-19 &#123;</span><br><span class="line">    margin-bottom: 19px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-mb-20 &#123;</span><br><span class="line">    margin-bottom: 20px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-ml-5 &#123;</span><br><span class="line">    margin-left: 5px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-ml-7 &#123;</span><br><span class="line">    margin-left: 7px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-ml-8 &#123;</span><br><span class="line">    margin-left: 8px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-ml-10 &#123;</span><br><span class="line">    margin-left: 10px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-ml-12 &#123;</span><br><span class="line">    margin-left: 12px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-ml-15 &#123;</span><br><span class="line">    margin-left: 15px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-ml-17 &#123;</span><br><span class="line">    margin-left: 17px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-ml-18 &#123;</span><br><span class="line">    margin-left: 18px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-ml-19 &#123;</span><br><span class="line">    margin-left: 19px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-ml-20 &#123;</span><br><span class="line">    margin-left: 20px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pt-5 &#123;</span><br><span class="line">    padding-top: 5px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pt-7 &#123;</span><br><span class="line">    padding-top: 7px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pt-8 &#123;</span><br><span class="line">    padding-top: 8px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pt-10 &#123;</span><br><span class="line">    padding-top: 10px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pt-12 &#123;</span><br><span class="line">    padding-top: 12px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pt-15 &#123;</span><br><span class="line">    padding-top: 15px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pt-17 &#123;</span><br><span class="line">    padding-top: 17px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pt-18 &#123;</span><br><span class="line">    padding-top: 18px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pt-19 &#123;</span><br><span class="line">    padding-top: 19px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pt-20 &#123;</span><br><span class="line">    padding-top: 20px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pr-5 &#123;</span><br><span class="line">    padding-right: 5px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pr-7 &#123;</span><br><span class="line">    padding-right: 7px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pr-8 &#123;</span><br><span class="line">    padding-right: 8px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pr-10 &#123;</span><br><span class="line">    padding-right: 10px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pr-12 &#123;</span><br><span class="line">    padding-right: 12px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pr-15 &#123;</span><br><span class="line">    padding-right: 15px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pr-17 &#123;</span><br><span class="line">    padding-right: 17px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pr-18 &#123;</span><br><span class="line">    padding-right: 18px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pr-19 &#123;</span><br><span class="line">    padding-right: 19px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pr-20 &#123;</span><br><span class="line">    padding-right: 20px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pb-5 &#123;</span><br><span class="line">    padding-bottom: 5px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pb-7 &#123;</span><br><span class="line">    padding-bottom: 7px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pb-8 &#123;</span><br><span class="line">    padding-bottom: 8px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pb-10 &#123;</span><br><span class="line">    padding-bottom: 10px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pb-12 &#123;</span><br><span class="line">    padding-bottom: 12px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pb-15 &#123;</span><br><span class="line">    padding-bottom: 15px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pb-17 &#123;</span><br><span class="line">    padding-bottom: 17px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pb-18 &#123;</span><br><span class="line">    padding-bottom: 18px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pb-19 &#123;</span><br><span class="line">    padding-bottom: 19px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pb-20 &#123;</span><br><span class="line">    padding-bottom: 20px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pl-5 &#123;</span><br><span class="line">    padding-left: 5px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pl-7 &#123;</span><br><span class="line">    padding-left: 7px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pl-8 &#123;</span><br><span class="line">    padding-left: 8px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pl-10 &#123;</span><br><span class="line">    padding-left: 10px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pl-12 &#123;</span><br><span class="line">    padding-left: 12px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pl-15 &#123;</span><br><span class="line">    padding-left: 15px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pl-17 &#123;</span><br><span class="line">    padding-left: 17px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pl-18 &#123;</span><br><span class="line">    padding-left: 18px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pl-19 &#123;</span><br><span class="line">    padding-left: 19px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pl-20 &#123;</span><br><span class="line">    padding-left: 20px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-lg-1,</span><br><span class="line">.zpt-lg-2,</span><br><span class="line">.zpt-lg-3,</span><br><span class="line">.zpt-lg-4,</span><br><span class="line">.zpt-lg-5,</span><br><span class="line">.zpt-lg-6,</span><br><span class="line">.zpt-lg-7,</span><br><span class="line">.zpt-lg-8,</span><br><span class="line">.zpt-lg-9,</span><br><span class="line">.zpt-lg-10&#123;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">.zpt-lg-1&#123;</span><br><span class="line">    width: 10%;</span><br><span class="line">&#125;                        </span><br><span class="line"></span><br><span class="line">.zpt-lg-2&#123;</span><br><span class="line">    width: 20%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-lg-3&#123;</span><br><span class="line">    width: 30%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-lg-4&#123;</span><br><span class="line">    width: 40%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-lg-5&#123;</span><br><span class="line">    width: 50%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-lg-6&#123;</span><br><span class="line">    width: 60%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-lg-7&#123;</span><br><span class="line">    width: 70%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-lg-8&#123;</span><br><span class="line">    width: 80%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-lg-9&#123;</span><br><span class="line">    width: 40%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-lg-10&#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-solid&#123;</span><br><span class="line">    border: 1px solid #333;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-solid-top&#123;</span><br><span class="line">    border-top: 1px solid #333;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-solid-right&#123;</span><br><span class="line">    border-right: 1px solid #333;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-solid-bottom&#123;</span><br><span class="line">    border-bottom: 1px solid #333;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-solid-left&#123;</span><br><span class="line">    border-left: 1px solid #333;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-dashed&#123;</span><br><span class="line">    border: 1px dashed #333;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-dashed-top&#123;</span><br><span class="line">    border-top: 1px dashed #333;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-dashed-right&#123;</span><br><span class="line">    border-right: 1px dashed #333;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-dashed-bottom&#123;</span><br><span class="line">    border-bottom: 1px dashed #333;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-dashed-left&#123;</span><br><span class="line">    border-left: 1px dashed #333;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-radius-2&#123;</span><br><span class="line">    border-radius: 2px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-radius-5&#123;</span><br><span class="line">    border-radius: 5px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-radius-10&#123;</span><br><span class="line">    border-radius: 10px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-radius-12&#123;</span><br><span class="line">    border-radius: 12px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-radius-15&#123;</span><br><span class="line">    border-radius: 15px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-pson-radius-50&#123;</span><br><span class="line">    border-radius: 50%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-indent&#123;</span><br><span class="line">    text-indent: 2rem;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-text-top&#123;</span><br><span class="line">    text-align: top;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-text-right&#123;</span><br><span class="line">    text-align: right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-text-bottom&#123;</span><br><span class="line">    text-align: bottom;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-text-left&#123;</span><br><span class="line">    text-align: left;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-text-center&#123;</span><br><span class="line">    text-align: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-text-justify&#123;</span><br><span class="line">    text-align: justify;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-line-height-18&#123;</span><br><span class="line">    line-height: 18px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-line-height-20&#123;</span><br><span class="line">    line-height: 20px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-line-height-22&#123;</span><br><span class="line">    line-height: 22px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-line-height-25&#123;</span><br><span class="line">    line-height: 25px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-line-height-28&#123;</span><br><span class="line">    line-height: 28px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-line-height-30&#123;</span><br><span class="line">    line-height: 30px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-line-height-33&#123;</span><br><span class="line">    line-height: 33px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-line-height-35&#123;</span><br><span class="line">    line-height: 35px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-line-height-40&#123;</span><br><span class="line">    line-height: 40px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-line-height-45&#123;</span><br><span class="line">    line-height: 45px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-line-height-50&#123;</span><br><span class="line">    line-height: 50px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.zpt-line-height-55&#123;</span><br><span class="line">    line-height: 55px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@media screen and (max-width: 1280px) &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@media screen and (max-width: 768px) &#123;</span><br><span class="line"></span><br><span class="line">    .zpt-cont&#123;</span><br><span class="line">        max-width: 90% !important;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    .zpt-md-1&#123;</span><br><span class="line">        width: 10%;</span><br><span class="line">    &#125;                        </span><br><span class="line"></span><br><span class="line">    .zpt-md-2&#123;</span><br><span class="line">        width: 20%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-md-3&#123;</span><br><span class="line">        width: 30%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-md-4&#123;</span><br><span class="line">        width: 40%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-md-5&#123;</span><br><span class="line">        width: 50%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-md-6&#123;</span><br><span class="line">        width: 60%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-md-7&#123;</span><br><span class="line">        width: 70%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-md-8&#123;</span><br><span class="line">        width: 80%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-md-9&#123;</span><br><span class="line">        width: 40%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-md-10&#123;</span><br><span class="line">        width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-lg-none&#123;</span><br><span class="line">        display: none;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-lg-block&#123;</span><br><span class="line">        display: block;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-md-none&#123;</span><br><span class="line">        display: none;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-md-block&#123;</span><br><span class="line">        display: block;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-xs-none&#123;</span><br><span class="line">        display: none;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-xs-block&#123;</span><br><span class="line">        display: block;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@media screen and (max-width: 414px) &#123;</span><br><span class="line">    </span><br><span class="line">    .zpt-cont&#123;</span><br><span class="line">        max-width: 95% !important;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-xs-1&#123;</span><br><span class="line">        width: 10%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-xs-2&#123;</span><br><span class="line">        width: 20%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-xs-3&#123;</span><br><span class="line">        width: 30%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-xs-4&#123;</span><br><span class="line">        width: 40%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-xs-5&#123;</span><br><span class="line">        width: 50%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-xs-6&#123;</span><br><span class="line">        width: 60%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-xs-7&#123;</span><br><span class="line">        width: 70%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-xs-8&#123;</span><br><span class="line">        width: 80%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-xs-9&#123;</span><br><span class="line">        width: 40%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-xs-10&#123;</span><br><span class="line">        width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-lg-none&#123;</span><br><span class="line">        display: none;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-lg-block&#123;</span><br><span class="line">        display: block;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-md-none&#123;</span><br><span class="line">        display: none;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-md-block&#123;</span><br><span class="line">        display: block;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    .zpt-xs-none&#123;</span><br><span class="line">        display: none;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .zpt-xs-block&#123;</span><br><span class="line">        display: block;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+	
+	</div>
+	
+	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+
+	<!-- relate post, comment...-->
+	<div class="investment-container">
+		<div class="investment-header">
+			<div class="investment-title-1">
+				<div class="on">相关文章</div>
+				<div>评论</div>
+			</div>
+			<div class="investment-title-2">	            
+				
+	<span>
+		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
+		
+		
+			<a href="/2019/01/29/html-01/" title="html第一章：简介" rel="next">
+				下一篇&raquo;
+			</a>
+			
+	</span>
+      		
+			</div>	
+		</div>
+		
+		<div class="investment-content">
+			<div class="investment-content-list">
+				
+
+<div class="relate-post">
+	<ul>
+		
+				<li>
+					<div>
+						<a href="/2019/01/29/html-01/" title="html第一章：简介">
+							html第一章：简介
+						</a>
+						<p>
+							首先来说一下前端：
+先来说一下，前端分为：大前端和小前端。小前端只做网站和小程序。而大前端是一个泛指，没有固定的一个概念，它可以做APP，可以做游戏，可以做出更好的交互等…..（好吧！我暂时也还没有吃透大前端。）总之，大前端可以做更多...
+						</p>
+					</div>
+
+					<a href="/2019/01/29/html-01/" title="html第一章：简介">				
+						<img src="/img/cart_cover_4.jpg" class="relateImg" alt="html第一章：简介">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2019/01/29/html-02/" title="html第二章：简介">
+							html第二章：简介
+						</a>
+						<p>
+							话不多说啊 上代码！
+一个完整的html文件必须包括DOCTYPE、html、head、body、title 如下所示：123456789101112&lt;!DOCTYPE html&gt;&lt;html lang=&quot;e...
+						</p>
+					</div>
+
+					<a href="/2019/01/29/html-02/" title="html第二章：简介">				
+						<img src="/img/cart_cover_4.jpg" class="relateImg" alt="html第二章：简介">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2019/01/15/U盘之图标修改/" title="U盘之图标修改">
+							U盘之图标修改
+						</a>
+						<p>
+							在U盘的根目录下新建一个名为autorun.inf的文件；
+如图所示
+
+找一张喜欢的图片做成ico格式的，如果不知道怎么做可以直接去一下这个网址去更改一下在线ico图标制作工具
+转换完成以后吧这个图片复制到U盘根目录下修改名称为1
+如...
+						</p>
+					</div>
+
+					<a href="/2019/01/15/U盘之图标修改/" title="U盘之图标修改">				
+						<img src="/img/cart_cover_2.jpg" class="relateImg" alt="U盘之图标修改">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2019/01/10/phpMysql-strginType/" title="php与数据库第一章">
+							php与数据库第一章
+						</a>
+						<p>
+							数据库的数据类型主要有123456789MySQL支持所有标准SQL数值数据类型。这些类型包括严格数值数据类型(INTEGER、SMALLINT、DECIMAL和NUMERIC)，以及近似数值数据类型(FLOAT、REAL和DOUBL...
+						</p>
+					</div>
+
+					<a href="/2019/01/10/phpMysql-strginType/" title="php与数据库第一章">				
+						<img src="/img/cart.jpg" class="relateImg" alt="php与数据库第一章">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/12/28/strgin/" title="strgin">
+							strgin
+						</a>
+						<p>
+							今天我们说一下字符串
+所谓数组，是无序的元素序列。 若将有限个类型相同的变量的集合命名，那么这个名称为数组名。组成数组的各个变量称为数组的分量，也称为数组的元素，有时也称为下标变量。用于区分数组的各个元素的数字编号称为下标。数组是在程...
+						</p>
+					</div>
+
+					<a href="/2018/12/28/strgin/" title="strgin">				
+						<img src="/img/cart_cover_1.jpg" class="relateImg" alt="strgin">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/12/27/animate/" title="animate.stop()">
+							animate.stop()
+						</a>
+						<p>
+							终止animate函数1234567function a()&#123;  $(&apos;p&apos;).animate(&#123;    left:&apos;100px&apos;  &#125;,1000)&#125;  ...
+						</p>
+					</div>
+
+					<a href="/2018/12/27/animate/" title="animate.stop()">				
+						<img src="/img/cart_cover.jpg" class="relateImg" alt="animate.stop()">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/12/26/insertBefore/" title="JQ appendChild()属性">
+							JQ appendChild()属性
+						</a>
+						<p>
+							ok 话不多说，开始今天的代码；
+昨天的问题想出来了没有？
+
+append这个属性能不能用呢？ 答案是否定的肯定不能用的
+
+因为append与appendTo()属性是一样的，都是往某一个元素的最后一个元素后面添加新的元素，appen...
+						</p>
+					</div>
+
+					<a href="/2018/12/26/insertBefore/" title="JQ appendChild()属性">				
+						<img src="/img/cart_cover_4.jpg" class="relateImg" alt="JQ appendChild()属性">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/12/25/appendTo/" title="JQ appendChild与appendFirst分别应该怎么实现？">
+							JQ appendChild与appendFirst分别应该怎么实现？
+						</a>
+						<p>
+							ok 话不多说，看代码吧！
+在开始以前，问一个问题，百叶扇效果你们会做么？
+
+首先 JQ里面的appendTo()这个函数是往选中的元素末尾添加的 
+
+比如：123456789&lt;a&gt;  &lt;b class=&quot;...
+						</p>
+					</div>
+
+					<a href="/2018/12/25/appendTo/" title="JQ appendChild与appendFirst分别应该怎么实现？">				
+						<img src="/img/cart_cover_3.jpg" class="relateImg" alt="JQ appendChild与appendFirst分别应该怎么实现？">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/12/21/keyDown-Dom/" title="keyDown dom实例">
+							keyDown dom实例
+						</a>
+						<p>
+							JQ键盘按下监听事件（1）：$(&#39;body&#39;).keydown(function (res){
+    console.log(res.originalEvent.key);
+  })
+
+以上代码效果为当键盘按键按下的...
+						</p>
+					</div>
+
+					<a href="/2018/12/21/keyDown-Dom/" title="keyDown dom实例">				
+						<img src="/img/cart_cover_2.jpg" class="relateImg" alt="keyDown dom实例">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/12/12/JS入门/" title="JS入门">
+							JS入门
+						</a>
+						<p>
+							JS与DOM的关系浏览器有渲染html代码的功能，把html源码（如div,p标签等）在内存里形成一个DOM对象文档对象模型DOM（Document Object Model）定义访问和处理HTML文档的标准方法。DOM 将HTML文...
+						</p>
+					</div>
+
+					<a href="/2018/12/12/JS入门/" title="JS入门">				
+						<img src="/img/cart.jpg" class="relateImg" alt="JS入门">
+					</a>
+				</li>											
+		
+		
+	</ul>
+</div>	
+			</div>
+			<div class="investment-content-list">
+				<div class="layout-comment">
+
+	
+
+		
+
+			<!-- I don't know 【表情】-->
+			
+		
+		
+	
+
+</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+
+	<script>
+		var appid = 'dX--',
+            appkey = 'dx--';	  
+        AnnieLeancloud(appid, appkey);         
+	</script>
+    
+
+
+ 
+
+<!-- show math formula -->
+
+
+
+
+<!-- TODO: There seems to be a bug when you close the post gallery! -->
+<link rel="stylesheet" href="/plugin/lightgallery/css/lightgallery.css">
+<script src="/plugin/lightgallery/js/jquery-1.11.0.min.js"></script>
+<script src="/plugin/lightgallery/js/lightgallery-all.min.js"></script>
+
+<script type="text/javascript">
+	var postTitle = $('.article-title a').text() ? $('.article-title a').text() : "No post title!";
+	$('.article-content img').each(function() {
+		var imgPath = $(this).attr('src'),
+			imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		$(this).wrap('<div class="img-responsive" data-src="' + imgPath + '" data-responsive="' + imgPath + '" data-sub-html="<p>图片 ' + imgTitle + '</p><h4>文章' + postTitle + '</h4>"></div>');
+	});
+
+	$('.article-content').lightGallery({
+		mode: 'lg-slide',
+		selector: '.img-responsive',
+		share: false,
+		zoom: false,
+		download: false
+	});
+	//TODO：支持video
+</script>
+
+<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+		
+
+		<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
+	
+		</main>
+		
+		<!--footer-->
+		<footer>
+	<div class="social">
+		<ul>
+	
+		
+			<li>
+				<a href="http://github.com/" title="Github" target="_blank">
+					<i class="fa fa-github"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="http://github.com/" title="Weibo" target="_blank">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="mailto:http://github.com/" title="Email" target="_blank">
+					<i class="fa fa-envelope-o"></i>
+				</a>
+			</li>
+		
+
+		
+			<li>
+				<a href="http://github.com/" title="QQ" target="_blank">
+					<i class="fa fa-qq"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="http://github.com/" title="Twitter" target="_blank">
+					<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+		
+	 
+</ul>
+	</div>
+		
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2019, content by peterZhang. All Rights Reserved.
+			
+			
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+		
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+
+		<span id="busuanzi_container_page_pv">
+	  		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span>
+
+	
+
+
+
+
+		</p>
+		<p>
+			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay. 					
+		</p>
+	</div>		
+</footer>
+		
+    <!-- set '1' to show motto in all pages! -->
+
+	<script src="/js/motto.js"></script>
+	<script type="text/javascript">
+		$(".motto").html( getMingYanContent() );
+	</script>	
+
+
+
+
+
+
+    <script src="/js/love.js"></script>
+
+
+<!--back to top-->
+
+    
+	<div id="totop">
+  		<a href="javascript:;" name="TOTOP" class="fa fa-arrow-up"></a>
+	</div>
+	<div id="tobuttom">
+		<a href="javascript:;" name="TOBUTTOM" class="fa fa-arrow-down"></a>
+	</div>
+ 
+
+
+ 
+
+<script src="/js/vibrant.js"></script>
+<script src="/js/chinese.js"></script>
+<script src="/js/main.js"></script>
+	</body>
+	</html>
