@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;800&amp;display=swap" rel="stylesheet">
+<title>冬天的第一份礼物</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: linear-gradient(135deg, #f0f4f8 0%, #e8eef5 50%, #dfe7f0 100%);
+    font-family: "Noto Sans SC", Segoe UI, system-ui, -apple-system, Roboto, Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    transition: background 1s ease-in-out;
+  }
+  /* 初始弹窗 */
+  #popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff0f5;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+    border-radius: 20px;
+    padding: 30px 40px;
+    text-align: center;
+    z-index: 9999;
+  }
+  #popup h1 {
+    color: #ff6994;
+    margin-bottom: 20px;
+  }
+  #popup button {
+    border: none;
+    background: #ff80ab;
+    color: white;
+    font-size: 18px;
+    border-radius: 25px;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  #popup button:hover {
+    background: #ff4d88;
+  }
+
+  /* loveCard 样式 */
+  .loveCard {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+    color: white;
+    font-weight: bold;
+    cursor: default;
+    user-select: none;
+    z-index: 10;
+    overflow: hidden;
+    /* Q弹动画可由JS动态添加 */
+  }
+  /* Q弹动画 */
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.5);
+    }
+    60% {
+      transform: scale(1.1);
+    }
+    80% {
+      transform: scale(0.95);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .loveCard .header, .loveCard .footer {
+    padding: 8px 12px;
+    font-size: 12px;
+    color: #1a1a1a;
+  }
+  .loveCard .header {
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+  }
+  .loveCard .footer {
+    border-top: 1px solid rgba(255,255,255,0.3);
+    font-size: 16px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div id="popup">
+  <h1>🎁 恭喜你收到冬天的第一份礼物</h1>
+  <p>你确定要打开吗？</p>
+  <button id="confirmBtn">确定</button>
+</div>
+
+<script>
+  const phrases = [
+    "又是一年，依然爱你❤️",
+    "虽然你倔倔的，但是我依然喜欢💗",
+    "香香宝宝💭",
+    "亲亲宝宝",
+    "大笨蛋宝宝",
+    "小聪明宝宝",
+    "超级大阔濑！",
+    "你想我了没？💭",
+    "你要记得想我呀！💭",
+    "臭狗屎",
+    "臭屁蛋",
+    "臭屁宝宝",
+    "大懒猪",
+    "臭粑粑！哈哈哈",
+    "小阔濑",
+    "长不大的小笨蛋",
+    "你是个小傻瓜",
+    "逐渐成熟的小笨蛋",
+    "超级无敌稀饭你！",
+    "你打算什么时候嫁给我呀！💍",
+    "我的温柔都给你了，你什么全身心爱我鸭？",
+  ];
+
+  const colorPairs = [
+    { header: "#fff3e0", footer: "#fffaf3" },
+    { header: "#ffebee", footer: "#fff5f5" },
+    { header: "#e1f5fe", footer: "#f0fbff" },
+    { header: "#f0ebf8", footer: "#f9f6fc" },
+    { header: "#f3e5f5", footer: "#faf5fc" }
+  ];
+
+  const popup = document.getElementById('popup');
+  const confirmBtn = document.getElementById('confirmBtn');
+
+  confirmBtn.addEventListener('click', () => {
+    popup.style.display = 'none';
+    generateLoveCards();
+  });
+
+  // Helper to get random int in [min, max)
+  function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+  // Helper to pick a random item from array
+  function randomItem(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  async function generateLoveCards() {
+    const body = document.body;
+    const maxCount = 520;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    // To ensure phrases cycle through, shuffle phrases array
+    const shuffledPhrases = phrases.slice();
+    for (let i = shuffledPhrases.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledPhrases[i], shuffledPhrases[j]] = [shuffledPhrases[j], shuffledPhrases[i]];
+    }
+
+    let insertedCount = 0;
+    const sizeWidth = 230;
+    const sizeHeight = 60;
+    const positions = [];
+
+    // Helper function to check if new position is far enough from existing positions
+    function isFarEnough(x, y) {
+      for (const pos of positions) {
+        const dx = x - pos.x;
+        const dy = y - pos.y;
+        if (Math.abs(dx) < sizeWidth && Math.abs(dy) < sizeHeight) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    while (insertedCount < maxCount) {
+      let left, top;
+      if (insertedCount === 0) {
+        // 第一个插入的 DOM 固定在屏幕正中央位置
+        left = (width - sizeWidth) / 2;
+        top = (height - sizeHeight) / 2;
+      } else {
+        let attempts = 0;
+        do {
+          left = Math.random() * (width - sizeWidth);
+          top = Math.random() * (height - sizeHeight);
+          attempts++;
+          if (attempts > 100) {
+            // 如果尝试太多次，放弃距离限制，防止死循环
+            break;
+          }
+        } while (!isFarEnough(left, top));
+      }
+
+      positions.push({x: left, y: top});
+
+      const card = document.createElement('div');
+      card.classList.add('loveCard');
+
+      // Fixed size 230px * 60px
+      card.style.width = `${sizeWidth}px`;
+    //   card.style.height = `${sizeHeight}px`;
+
+      // Position inside viewport (avoid overflow)
+      card.style.left = `${left}px`;
+      card.style.top = `${top}px`;
+
+      // Rectangle shape with border-radius 20px
+      card.style.borderRadius = "20px";
+
+      // Randomly pick a color pair for header and footer
+      const colorPair = randomItem(colorPairs);
+
+      // Create header and footer elements
+      const header = document.createElement('div');
+      header.className = 'header';
+      header.textContent = "💝 提示";
+      header.style.backgroundColor = colorPair.header;
+
+      const footer = document.createElement('div');
+      footer.className = 'footer';
+      footer.textContent = shuffledPhrases[insertedCount % shuffledPhrases.length];
+      footer.style.backgroundColor = colorPair.footer;
+
+      card.appendChild(header);
+      card.appendChild(footer);
+
+      // Background color for card body: use header color
+      card.style.backgroundColor = colorPair.header;
+
+      // Animation: clockwise rotation + Q弹动画
+      const duration = 10 + Math.random() * 10; // 10-20s
+      card.style.animation = `rotateClockwise ${duration}s linear infinite, bounceIn 0.6s ease`;
+
+      body.appendChild(card);
+
+      insertedCount++;
+
+      // 固定插入间隔为 131.4ms，移除所有分段和插值计算
+      const interval = 131.34;
+      await sleep(interval);
+    }
+  }
+</script>
+
+</body>
+</html>
